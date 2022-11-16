@@ -9,16 +9,16 @@
 // coconut = 50;
 
 do {
-    period = prompt("Winter or summer period?").toLowerCase().trim();
+    period = prompt("Winter or summer period?").toLowerCase().replaceAll(" ", "");
 } while (period !== "winter" && period !== "summer");
 
 do {
-    category = prompt("Choose category in which you want to buy products: vegetebles or fruits").toLowerCase().trim();
+    category = prompt("Choose category in which you want to buy products: vegetebles or fruits").toLowerCase().replaceAll(" ", "");
 } while (category !== "vegetebles" && category !== "fruits");
 
 if(category === "vegetebles") {
     do {
-        selectedProduct = prompt("Choose product from category vegetables: cabbage, avocado, tomato.").toLowerCase().trim();
+        selectedProduct = prompt("Choose product from category vegetables: cabbage, avocado, tomato.").toLowerCase().replaceAll(" ", "");
     } while (selectedProduct !== "cabbage" && selectedProduct !== "avocado" && selectedProduct !== "tomato");
     // console.log(selectedProduct);
 
@@ -40,7 +40,7 @@ if(category === "vegetebles") {
 
 } else if(category === "fruits") {
     do {
-        selectedProduct = prompt("Choose product from category fruits: grapes, raspberry, coconut.").toLowerCase().trim(); 
+        selectedProduct = prompt("Choose product from category fruits: grapes, raspberry, coconut.").toLowerCase().replaceAll(" ", ""); 
     } while (selectedProduct !== "grapes" && selectedProduct !== "raspberry" && selectedProduct !== "coconut");
 
     prise = 0;
@@ -65,7 +65,7 @@ do {
     countOfProduct = +prompt(`Enter count of ${selectedProduct}`);
 } while (countOfProduct < 1 || isNaN(countOfProduct));
 
-console.log(countOfProduct);
+// console.log(countOfProduct);
 
 // debugger;
 if(period === "winter") {
